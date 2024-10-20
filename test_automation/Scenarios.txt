@@ -1,0 +1,38 @@
+Scenario 1: Send a message to the company without checking the TC
+	Given the dashboard is loaded 
+         - Load the page
+         - click on contact link( pred search lupata)
+	When the user fills the form
+         - Enter First name, last name, email, message
+        And not select the accept TC checkbox
+         - click on send
+	Then an error message is displayed.
+         - validate that the error message is displayed
+
+Scenario 2: Validating the load of the customer page for ASML
+
+     Given the customer page is loaded
+     When the user selects the ASML customer
+     Then the proper page for ASML is loaded
+
+Scenario 3: Validating that the get in touch button is displayed on the customer success stories page
+
+   Given the dashboard is loaded
+   When I navigate to customer success stories
+    - Resources -> Success Stories
+   Then get in touch button is visible
+
+Scenario 4: Validating the open position for Automation QA
+   Given the dashboard is loaded
+   When I navigate to Careers
+   And search for a qa open positons
+   Then a single open position is displayed
+
+Scenario 5: Verifying that the go to ICT Group site link is visible
+
+  Given the dashboard is loaded
+  When I navigate to About ICT group page
+  Then the go to ICT Group site link is visible 
+
+  
+
